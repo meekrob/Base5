@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="madman.david.base5.MainActivity">
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:text="@string/baseTen"
+            android:labelFor="@+id/base_ten_entry"
+            android:id="@+id/textView"
+            android:textStyle="bold"
+            android:textAlignment="textEnd" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/base_ten_entry"
+            android:layout_column="2"
+            android:width="20dp"
+            android:numeric="integer"
+            android:layout_weight="1" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:text="@string/button_text"
+            android:id="@+id/button" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/baseFive"
+            android:layout_column="1"
+            android:textStyle="bold"
+            android:textAlignment="textEnd" />
+        <TextView
+            android:id="@+id/outtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_weight="1"
+            />
+        <TextView android:text="+" android:layout_column="3"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5^3: 125 X "
+            android:textStyle="bold"
+            android:layout_column="1"
+            android:textAlignment="textEnd" />
+        <TextView
+            android:id="@+id/outtext_125"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_column="2"/>
+        <TextView android:text="+" android:layout_column="3"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5^2: 25 X "
+            android:layout_column="1"
+            android:textStyle="bold"
+            android:textAlignment="textEnd" />
+        <TextView
+            android:id="@+id/outtext_25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_column="2"
+             />
+        <TextView android:text="+" android:layout_column="3"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5^1: 5 X "
+            android:layout_column="1"
+            android:textStyle="bold"
+            android:textAlignment="textEnd" />
+        <TextView
+            android:id="@+id/outtext_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_weight="1"
+             />
+        <TextView android:text="+" android:layout_column="3"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5^0: 1 X "
+            android:layout_column="1"
+            android:textStyle="bold"
+            android:textAlignment="textEnd" />
+        <TextView
+            android:id="@+id/outtext_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_weight="1"
+             />
+        <TextView android:text="=" android:layout_column="3"/>
+    </TableRow>
+</TableLayout>
