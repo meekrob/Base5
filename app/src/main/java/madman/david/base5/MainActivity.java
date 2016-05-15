@@ -2,6 +2,7 @@ package madman.david.base5;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -17,7 +18,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
         String stringArg = entry.getText().toString();
         try {
             int arg = new Integer(stringArg);
-            base5result = zeroPad(base5(arg),4);
+            base5result = base5(arg);
+            Log.d("Compute().base5", base5result);
+            base5result = zeroPad(base5result,4);
+            Log.d("Compute().zeroPad(4)", base5result);
             outputView.setText(base5result);
             char arr[] = base5result.toCharArray();
             for (int i = 0; i < 4; i++)
@@ -27,7 +31,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
         }
         catch (NumberFormatException e) {
             Toast.makeText(this, stringArg + " is not a number", Toast.LENGTH_LONG);
-            return;
         }
     }
 
@@ -56,7 +59,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     protected String repeatChar(char c, int n) {
         char charray[] = new char[n];
         for (int i = 0; i < n; i++) charray[i] = c;
-        return charray.toString();
+        return new String(charray);
     }
     protected String zeroPad(String res, int width) {
         if (res.length() < 4)
@@ -68,7 +71,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     }
     protected String baseN(int digit, int base) {
         if (digit == 0)
-            return "0'";
+            return "0";
 
         String answer = "";
         while (digit > 0) {
